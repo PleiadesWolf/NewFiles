@@ -1,10 +1,17 @@
 import subprocess
 
 while True:
-    subprocess.run("su", "wolf")
-    inpt = input ("Input: ")
-    command = (inpt)
-    if command == "htop":
-        print("Permission Denied")
-    else:
-        subprocess.run(command)
+    try:
+        inpt = input("Input: ")
+        command = (inpt)
+
+        if command == "htop":
+           print("Permission Denied")
+    
+        else:
+           test = inpt.split(" ")
+           subprocess.run(test)
+    except EOFError:
+        break
+
+

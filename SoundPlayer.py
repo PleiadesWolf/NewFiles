@@ -5,7 +5,8 @@ file = '4569580598591488.wav'
 try:
     import winsound
 except ModuleNotFoundError:
-    pass
+    print("Windows only!")
+    exit()
 
 while True:
     randnum = randrange(100)
