@@ -1,7 +1,6 @@
-import time, subprocess, winsound
-from random import randrange
+import time, subprocess, winsound, random
 while True:
-    n = randrange(100)
+    n = random.randrange(100)
     if n > 95:
         print("Yes", n)
         winsound.PlaySound("sounds.wav", winsound.SND_FILENAME)
